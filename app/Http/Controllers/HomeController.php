@@ -8,8 +8,8 @@ use App\Pacchetto;
 class HomeController extends Controller
 {
     public function index(){
-        $pacchetti = Pacchetto::all();
-        dump($pacchetti);
+        $pacchetti = Pacchetto::paginate(5);
+        //dump($pacchetti);
     
         return view ('home',compact('pacchetti'));
     }
