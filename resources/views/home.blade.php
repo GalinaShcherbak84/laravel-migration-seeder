@@ -12,7 +12,11 @@
                 <p>Data di partenza: {{$pacchetto['partenza']}}</p>
                 <p>Città di partenza: {{$pacchetto['partenza_da']}}</p>
                 <p>Posti disponibili: {{$pacchetto['posti']}}</p>
+                @if (!$loop->last)
+                    <hr>
+                @endif
             </div>
         @endforeach
+        <div>{{$pacchetti->links()}}</div>
     </div>
 @endsection
